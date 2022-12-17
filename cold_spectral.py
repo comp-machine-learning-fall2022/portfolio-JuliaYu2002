@@ -3,7 +3,6 @@ import pandas as pd
 from scipy.spatial import distance
 from sklearn.cluster import KMeans
 
-# 1
 """
 full_kmeans:
 this function runs a kmeans instance on some data
@@ -22,9 +21,8 @@ def full_kmeans(data, k):
     #     norm = np.around(norm, decimals = 2)
     #     data[:,i] = norm
     data_fit = kmeans_setting.fit(data)
-    return (k - 1, data_fit.cluster_centers_)
+    return (data_fit.labels_, data_fit.cluster_centers_)
 
-# 2a
 """
 make_adj:
 this function makes an adjacency matrix depending
@@ -46,7 +44,6 @@ def make_adj(np_arr):
     dist_arr[not_half] = 0
     return dist_arr #np arr of only 0s and 1s
 
-# 2b
 """
 my_laplacian:
 this function will make a laplacian array
@@ -65,7 +62,6 @@ def my_laplacian(adj):
     D = np.diag(D)
     return np.subtract(D, A) #laplacian unnormalized arr
 
-# 3
 """
 spect_clustering:
 this function makes a reduced matrix with eigenvectors/values
