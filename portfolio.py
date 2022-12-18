@@ -3,13 +3,19 @@ import time
 import timeit
 import line_profiler
 import memory_profiler
+from sklearn.cluster import KMeans
+from sklearn.model_selection import KFold
+from sklearn.model_selection import cross_validate
+from sklearn.preprocessing import Normalizer
+from sklearn.metrics import mean_squared_error
+from sklearn.cluster import SpectralClustering
+from sklearn.model_selection import train_test_split
+from sklearn.model_selection import LeaveOneOut
+from sklearn.metrics.pairwise import laplacian_kernel
+from sklearn.preprocessing import StandardScaler
 
-""" library imports of what im likely going to use
-from sklearn.cluster import KMeans # kmeans, look at labs 3/4, hw 2 (cold_kmeans)
-from sklearn.metrics import mean_squared_error, function started apprearing in lab 9
-
-
-"""
+# data: https://www.kaggle.com/datasets/mariotormo/complete-pokemon-dataset-updated-090420?select=pokedex_%28Update_05.20%29.csv
+# note: file name originally "pokedex_(Update_05.20)", changed to "pokedex" since its shorter
 
 """ possible import statements for functions, stick the links about the functions i end up comparing in the add statement istg
 https://scikit-learn.org/stable/modules/classes.html
