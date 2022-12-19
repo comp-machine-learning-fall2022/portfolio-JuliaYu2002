@@ -35,7 +35,7 @@ def cold_kfoldcv(data, col_names, inputs, output, k):
     input: a numpy array, a list of column names, the input columns as a list, the output column, and the number of folds
     output: the mse average
     """
-    data_groups = np.array_split(data, k) # list of numpy arrays
+    data_groups = np.array_split(data, k)
     in_vals = []
     for x in inputs:
         in_loc = col_names.index(x)
