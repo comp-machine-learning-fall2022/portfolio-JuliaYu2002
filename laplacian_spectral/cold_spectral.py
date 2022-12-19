@@ -2,17 +2,6 @@ import numpy as np
 from scipy.spatial import distance
 from sklearn.cluster import KMeans
 
-def full_kmeans(data, k):
-    """
-    full_kmeans: runs a kmeans instance on some data utilizing the builtin sklearn function
-    imput: a numpy array data, and the number of clusters k
-    output: the cluster labels and the cluster centers
-    """
-    kmeans_setting = KMeans(n_clusters = k, init = "random", random_state = 1, max_iter = 200)
-    data_fit = kmeans_setting.fit(data)
-    
-    return (data_fit.labels_, data_fit.cluster_centers_)
-
 def make_adj(np_arr):
     """
     make_adj: makes an adjacency matrix depending on the distances of points from each other

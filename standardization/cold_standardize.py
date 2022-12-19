@@ -1,12 +1,19 @@
 import numpy as np
+import pandas as pd
 
-def cold_standard(data_name):
-    data_np = np.genfromtxt(data_name, delimiter = ",")
-    mean_vec = np.mean(data_np, axis = 0)
-    sd_vec = np.std(data_np, axis = 0)
+def cold_standard(data_name, stand_cols):
+    """
+    cold_standard: standardizes data in given columns
+    input: a filename and a selection of columns to normalize the contents of as a list
+    output: a numpy array with standardized columns
+    """
+    data_pd = pd.read_csv(data_name, sep = ",")
+    data_std = data_pd.copy()
 
-    data_std = data_np.copy()
+    for col in stand_cols:
+        mean_vec = np.mean(data_pd[col], axis = 0)
+        sd_vec = np.std(data_pd[col], axis = 0)
+        sd_vec = np.std(data_pd[col], axis = 0)
+        data_std[col] = (data_pd[col] - mean_vec * np.ones(len(data_pd))) / sd_vec
 
-    for i in range(data_np.shape[1]):
-        data_std[:,i] = (data_np[:,i] - mean_vec[i] * np.ones(data_np.shape[0])) / sd_vec[i]
-    return data_std
+    return data_std.to_numpy()

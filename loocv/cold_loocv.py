@@ -10,6 +10,9 @@ def cold_mse(truth_vec, predict_vec):
     return np.mean((truth_vec - predict_vec)**2)
 
 def cold_loocv(data_name):
+    """
+    cold_loocv: 
+    """
     data = np.genfromtxt(data_name, delimiter = ",")
     n_data = data.shape[0]
 
