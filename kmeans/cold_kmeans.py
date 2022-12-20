@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
 from scipy.spatial import distance
-from sklearn.cluster import KMeans
 
 def cold_means(data_name, k, state, cols, loop_num):
     """
@@ -18,7 +17,7 @@ def cold_means(data_name, k, state, cols, loop_num):
 
     for current_loop in range(loop_num):
         dists = distance.cdist(data_np, centers_np, 'euclidean')
-        clusters = np.argmin(dists, axis=1)
+        clusters = np.argmin(dists, axis = 1)
         for i in range(k):
             centers_np[i, :] = np.mean(data_np[clusters[:] == i], axis = 0)
 

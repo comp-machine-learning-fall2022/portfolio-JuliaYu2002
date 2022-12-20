@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from sklearn import linear_model
+from sklearn.tree import DecisionTreeClassifier
 
 def cold_mse(truth_vec, predict_vec):
     """
@@ -9,6 +9,15 @@ def cold_mse(truth_vec, predict_vec):
     output: the mean squared error
     """
     return np.mean((truth_vec - predict_vec)**2)
+
+def cold_classification(pred_class, class_truth):
+    """
+    cold_classification: calculates the number of right to wrong (or yes/no) in the predictions vs the actual
+    input: 2 numpy arrays that have the predictions based on some data and the actual classifications
+    output: the ratio of the classifications
+    """
+    wrong = np.sum(class_truth[:] != pred_class[:])
+    return np.mean(wrong / class_truth.shape[0])
 
 def data_reduction(dataset_file, lst):
     """
@@ -49,10 +58,10 @@ def cold_kfoldcv(data, col_names, inputs, output, k):
         test = data_groups.pop(i)
         train = np.vstack(data_groups)
         
-        lm_fit = linear_model.LinearRegression()
-        mod_A = lm_fit.fit(train[:, in_vals], train[:, [out_location]])
-        test_predictions = mod_A.predict(test[:, in_vals])
-        errors.append(cold_mse(test_predictions, test[:, [out_location]]))
+        tree = DecisionTreeClassifier(ccp_alpha = 0.001, max_depth=3)
+        tree.fit(train[:, in_vals], train[:, out_location].astype(int))
+        predictions = tree.predict(test[:, in_vals])
+        errors.append(cold_classification(predictions, test[:, [out_location]]))
         
         data_groups.insert(i, test)
     return np.mean(errors)
