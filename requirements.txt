@@ -1,0 +1,8 @@
+scipy
+jupyter
+sphinx
+numpydoc
+pytest
+numpy
+pandas
+scikit-learn
