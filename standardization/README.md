@@ -10,7 +10,7 @@ My cold coded function takes in a file name and a list of columns to standardize
 
 ## The Sklearn [Standardization](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html)
 
-The Sklearn module has its own standardizing function which requires the initialization of an instance and then this would be fit to the data. Additional things that can be pulled from this are the means of the data and the standard deviations which are accessable with dot notation. 
+The Sklearn module has its own standardizing function which requires the initialization of an instance and then this would be fit to the data. Additional things that can be pulled from this are the means of the data and the standard deviations which are accessible with dot notation. 
 
 # The Results
 

@@ -10,7 +10,7 @@ These predictions are then compared to the actual values via a classification me
 
 ## The Sklearn [Kfold Cross Val](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.cross_val_score.html)
 
-The Sklearn function for Kfoldcv uses an estimator (for example, an initialized decision tree, linear regression, etc.), the input data, the output data, how to analyse the results (the type of analysis to perform), the number of folds, and various other parameters.
+The Sklearn function for Kfoldcv uses an estimator (for example, an initialized decision tree, linear regression, etc.), the input data, the output data, how to analyze the results (the type of analysis to perform), the number of folds, and various other parameters.
 
 This only requires an initialized estimator to work, and it returns a Numpy array of the cross val results.
 
@@ -20,7 +20,7 @@ When using `%%timeit`, the cold coded function runs in 17.1 ms with a standard d
 
 The memory used by both my cold coded function and the Sklearn one come up as 0 MiB as shown by `%memit`, which really means that the both of them use under $2^{20}$ bytes.
 
-By virtue of my cold coded function running in slightly less time, it seems to be the better option. Though it might be interesting to note that when using `%%time`, the amount of time used by the CPU is higher when using the cold coded one at 31.2 ms, while the Sklearn inplementation uses 15.6 ms. So the differences are small but with some computational differences.
+By virtue of my cold coded function running in slightly less time, it seems to be the better option. Though it might be interesting to note that when using `%%time`, the amount of time used by the CPU is higher when using the cold coded one at 31.2 ms, while the Sklearn implementation uses 15.6 ms. So the differences are small but with some computational differences.
 
 
 <!-- ## The Sklearn [Train Test Split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)
