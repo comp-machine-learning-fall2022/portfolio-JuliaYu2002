@@ -1,8 +1,12 @@
 # Standardization
 
+### What is Standardization and How is it Calculated?
+
 The equation to calculate a standardized column is the following:
 
 $Var_{standard} = \dfrac{Var - Var_{mean}}{Var_{sd}}$
+
+Standardizing data centers everything at 0 and so that everything has a standard deviation of 1.
 
 ## The Cold Coded Standardization
 

@@ -2,7 +2,7 @@
 
 ## An examination of speed and memory.
 
-As a college student with a year left until I graduate, I seek to understand more about the different fields and subject lines within computer science. I took algorithms this semester and I have a better understanding of why time and memory are extremely important in industry. Time is money after all. I also took a class on machine learning this semester and I learned more about how data can be classified and used to make predictions about future data. Thinking about both of them, I'm curious to unravel the time and space complexities of implementations coded by my hands and the functions of the Sklearn library used throughout the semester in my machine learning class.
+As a college student with a bit over a year left until I graduate, I seek to understand more about the different fields and subject lines within computer science. I took algorithms this semester and I have a better understanding of why time and memory are extremely important in industry. Time is money after all. I also took a class on machine learning this semester and I learned more about how data can be classified and used to make predictions about future data. Thinking about both of them, I'm curious to unravel the time and space complexities of implementations coded by my hands and the functions of the Sklearn library used throughout the semester in my machine learning class.
 
 I specifically look at implementations of KMeans, Kfold Cross Validation, Data Normalization, and Data Standardization. Future additions may include analysis of:
 - splitting data into train and test sets

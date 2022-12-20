@@ -1,5 +1,9 @@
 # KMeans
 
+## What does KMeans do?
+
+KMeans finds the places that datapoints are closest to, referred to as centers, and assigns all points in the dataset to a cluster which is determined by how close they are to each center (called labels).
+
 ## The Cold Coded KMeans
 
 My implementation of KMeans takes a file name, the number of clusters desired, a random state, a list of columns to get the relationship between, and the max number of loops to find the "most accurate" center points that the data lie around.
@@ -18,4 +22,4 @@ Using `%%timeit`, my implementation runs faster at a rate of 9.13 ms with a stan
 
 Looking at the amount of memory used by both processes by using `%%memit`, my implementation uses .63 MiB while the Sklearn module uses .04 MiB.
 
-With my implementation taking more memory but also taking less time, it's dependent on which a person would want to conserve more of in the long run.
+With my implementation taking more memory but also taking less time, it's dependent on which a person would want to conserve more of in the long run. The growth of memory use and time use in the cold coded function would likely grow at a rate that correlates more to the size of the data than the number of clusters. It's a bit harder to say which the Sklearn version would rely on more since it's not evident what it does to perform the KMeans.

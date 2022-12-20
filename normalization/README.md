@@ -1,8 +1,12 @@
 # Normalization
 
+### What is Normalization and How is it Calculated?
+
 The equation to calculate a normalized column is the following:
 
 $Var_{norm} = \dfrac{Var - Var_{min}}{Var_{max} - Var_{min}}$
+
+Normalization changes all values in the dataframe to be between 0 and 1.
 
 ## The Cold Coded Normalization
 

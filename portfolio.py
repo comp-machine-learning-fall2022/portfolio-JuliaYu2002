@@ -70,3 +70,14 @@ https://www.techtarget.com/searchstorage/definition/mebibyte-MiB
 https://scikit-learn.org/stable/modules/model_evaluation.html#defining-your-scoring-strategy-from-metric-functions !!!!!
 
 """
+
+""" stuff from kfold
+train, test = train_test_split(overall_poke_np, train_size = .9, random_state = 2022)
+
+tree = DecisionTreeClassifier(ccp_alpha = 0.001, max_depth = 3)
+tree.fit(train[:, 6:13], train[:, 1].astype(int))
+
+preds = tree.predict(test[:, 6:13])
+
+cold_classification(preds, test[:, 1])
+"""

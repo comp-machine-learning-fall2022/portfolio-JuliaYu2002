@@ -1,5 +1,13 @@
 # Kfold Cross Validation
 
+### What is Kfold?
+
+Kfold is a way to split data into groups such that each group can be used as a test set once while everything else is used to train a model. This occurs when the number of groups is not equal to the total number of data points. It's used in cross validation.
+
+###  What is Cross Validation?
+
+Cross validation is a strategy to find the error that a specific model has when predicting values of data that it has never seen before.
+
 ## The Cold Coded Kfold Cross Validation (Using a Decision Tree)
 
 My cold implementation of Kfoldcv takes in a Numpy data array, all the column names, the input columns and output column, and the number of folds to split the data into.
