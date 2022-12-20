@@ -10,7 +10,7 @@ Standardizing data centers everything at 0 and so that everything has a standard
 
 ## The Cold Coded Standardization
 
-My cold coded function takes in a file name and a list of columns to standardize. It makes a Pandas dataframe and loops through the column list to access each column to standardize. It does this by calculating the mean and standard deviations of the column and doing the math in the equation. After it finishes all the columns listed, it returns the data as a Numpy array.
+My cold coded function takes in a file name and a list of columns to standardize. It makes a Pandas data frame and loops through the column list to access each column to standardize. It does this by calculating the mean and standard deviations of the column and doing the math in the equation. After it finishes all the columns listed, it returns the data as a Numpy array.
 
 ## The Sklearn [Standardization](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html)
 

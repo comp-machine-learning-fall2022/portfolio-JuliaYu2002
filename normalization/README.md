@@ -10,7 +10,7 @@ Normalization changes all values in the dataframe to be between 0 and 1.
 
 ## The Cold Coded Normalization
 
-My implementation of normalization takes in a file name and the columns that the user desires to have normalized as a list. It reads in the data as a Pandas dataframe and then loops through the columns in the list and calculates the minimum and maximum of the column. Then it calculates the normalized numbers for the column. It then returns this as a Numpy array.
+My implementation of normalization takes in a file name and the columns that the user desires to have normalized as a list. It reads in the data as a Pandas data frame and then loops through the columns in the list and calculates the minimum and maximum of the column. Then it calculates the normalized numbers for the column. It then returns this as a Numpy array.
 
 ## The Sklearn [Normalization](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html)
 

@@ -2,13 +2,13 @@
 
 ## What does KMeans do?
 
-KMeans finds the places that datapoints are closest to, referred to as centers, and assigns all points in the dataset to a cluster which is determined by how close they are to each center (called labels).
+KMeans finds the places that data points are closest to, referred to as centers, and assigns all points in the dataset to a cluster which is determined by how close they are to each center (called labels).
 
 ## The Cold Coded KMeans
 
 My implementation of KMeans takes a file name, the number of clusters desired, a random state, a list of columns to get the relationship between, and the max number of loops to find the "most accurate" center points that the data lie around.
 
-It reads in the data as a Pandas dataframe creates some Numpy arrays from it to work. Then using a nested for loop, it obtains the distances of all points to the centers and updates the centers accordingly. After it finishes looping, the centers of the clusters and the labels showing what cluster each point belongs to is returned as a tuple.
+It reads in the data as a Pandas data frame creates some Numpy arrays from it to work. Then using a nested for loop, it obtains the distances of all points to the centers and updates the centers accordingly. After it finishes looping, the centers of the clusters and the labels showing what cluster each point belongs to is returned as a tuple.
 
 ## The Sklearn [KMeans](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.k_means.html)
 
