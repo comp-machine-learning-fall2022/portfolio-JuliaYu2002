@@ -50,4 +50,4 @@ I specifically look at implementations of KMeans, Kfold Cross Validation, Data N
 
 - https://www.kaggle.com/datasets/mariotormo/complete-pokemon-dataset-updated-090420?select=pokedex_%28Update_05.20%29.csv
   - The data I use in the Jupyter Notebooks
-    - The original name was "pokedex_(Update_05.20)", but I changed it to "pokedex" since its shorter
+    - The original name was "pokedex_(Update_05.20)", but I changed it to "pokedex" since it's shorter
